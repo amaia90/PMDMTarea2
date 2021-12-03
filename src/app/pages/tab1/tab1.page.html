@@ -7,9 +7,11 @@
 </ion-header>
 
 <ion-content>
+  <!--He añadido el componente ion-segment de ionic para realizar lo botones de las diferentes categorías-->
+  <!--He incluído una función llamada segmentChanged para que capture el evento cuando se produzca un cambio mandará el valor al ts y lo he llamado botonSeleccionado-->
   <ion-segment (ionChange)="segmentChanged($event)" [value]="botonSeleccionado">
-    <ion-segment-button value="general">
-      <ion-label>GENERAL</ion-label>
+    <ion-segment-button value="general"> <!--Su value es general-->
+      <ion-label>GENERAL</ion-label> <!--Creo las pestañas del ion-segment-->
     </ion-segment-button>
     <ion-segment-button value="business">
       <ion-label>BUSINESS</ion-label>
@@ -21,12 +23,14 @@
       <ion-label>SCIENCE</ion-label>
     </ion-segment-button>
   </ion-segment>
-  <ion-list *ngFor="let item of listaNoticias">
+  <ion-list *ngFor="let item of listaNoticias"> <!--Recorre el array listaNoticias con la variable item-->
     <ion-item>
+      <!--Cuando se produzca ionChange, es decir un cambio en el estado, se llama a la función check que lleva el event y el item del ngFor-->
       <ion-checkbox color="primary" slot="start" (ionChange)="check($event, item)"></ion-checkbox>
       <ion-label color="primary" class="ion-text-wrap">
-        <h3>{{ item.name}} </h3>
+        <h3>{{ item.title}} </h3> <!--Muestra el title y la description del array listaNoticias con la variable item del ngFor-->
         <p> {{ item.description}} </p>
+    
       </ion-label>
     </ion-item>
   </ion-list>

@@ -1,4 +1,4 @@
-import { Article } from './../../interfaces/interfaces';
+import { INoticias } from './../../interfaces/interfaces';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./noticias.component.scss'],
 })
 export class NoticiasComponent implements OnInit {
-  @Input() listaNoticias: Article[];
+  @Input() listaNoticias: INoticias[];
 
   constructor() { }
 

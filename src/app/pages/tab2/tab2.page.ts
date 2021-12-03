@@ -1,5 +1,5 @@
 import { GestionNoticiasLeerService } from './../../services/gestion-noticias-leer.service';
-import { Article, INoticias } from './../../interfaces/interfaces';
+import {INoticias } from './../../interfaces/interfaces';
 import { Component } from '@angular/core';
 
 @Component({
@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class Tab2Page {
 
   // Creo e inicializo un array vacío
-  listaNoticias: INoticias[] = [];
+  listaNoticias: INoticias[] = []; //listaNoticias es de tipo Inoticias
 
   constructor(public gestionNoticiasLeer: GestionNoticiasLeerService) {
 

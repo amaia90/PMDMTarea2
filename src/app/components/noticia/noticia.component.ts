@@ -11,7 +11,8 @@ import { AlertController } from '@ionic/angular';
 export class NoticiaComponent implements OnInit {
   @Input() noticia: INoticias;
 
-  constructor(private gestionNoticiasLeer: GestionNoticiasLeerService, private alertController: AlertController) { }
+
+  constructor(private gestionNoticiasLeer: GestionNoticiasLeerService, private alertController: AlertController) { console.log("aqui abajo") }
 
   ngOnInit() {}
 
